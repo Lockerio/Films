@@ -13,11 +13,9 @@
 
     <ul class="films">
         {% for film in films %}
-        <a class="film_detail_view_link" href="/film/{{ film.id }}">
-            <li class="film">
-                {{ film.title }}: {{ film.genre }}. Рейтинг: {{ film.rating }}
-            </li>
-        </a>
+        <li class="film">
+            {{ film.genre }}
+        </li>
         {% endfor %}
     </ul>
 </body>

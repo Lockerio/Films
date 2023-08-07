@@ -10,8 +10,14 @@ app = Flask(__name__)
 def main():
     raw_films = filmService.get_all()
     films = FilmDataHelper.format_films(raw_films)
-
     return render_template("main.html", films=films)
+
+
+@app.route("/film/<int:film_id>")
+def detail_film(film_id):
+    raw_film = filmService.get_one(film_id)
+    film = FilmDataHelper.format_films(raw_film)
+    return render_template("film.html", film=film)
 
 
 if __name__ == '__main__':

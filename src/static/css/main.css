@@ -16,6 +16,10 @@
     --button-search-color-hover: #42403E;
 }
 
+body {
+    background: var(--background-color);
+}
+
 .films {
     margin: 20px;
     list-style-type: none;
@@ -24,5 +28,16 @@
 .film {
     border-radius: 5px;
     padding: 20px;
-    background: var(--background-color);
+    background: var(--button-color);
+}
+
+.film:hover {
+    border-radius: 5px;
+    padding: 20px;
+    background: var(--button-color-hover);
+}
+
+.film_detail_view_link {
+    text-decoration: none;
+    color: #000;
 }
