@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <title>Все фильмы</title>
+    <title>Главная</title>
 </head>
 <body>
+    <div class="header">
+
+
+    </div>
+
+
+
     <ul class="films">
         {% for film in films %}
-        <li>
-            {{ film }}
+        <li class="film">
+            {{ film.genre }}
         </li>
         {% endfor %}
     </ul>
