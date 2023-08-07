@@ -41,8 +41,8 @@ class Rating(Base):
     film_id = Column(Integer(), ForeignKey('Film.id'), primary_key=True)
     rating = Column(Integer(), nullable=False)
 
-    user = relationship("User", back_populates="rating")
-    film = relationship("Film", back_populates="rating")
+    user = relationship("User", back_populates="ratings")
+    film = relationship("Film", back_populates="ratings")
 
     def __repr__(self):
         return f"{self.user} - {self.film} = {self.rating}"
