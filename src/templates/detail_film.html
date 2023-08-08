@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Главная</title>
+</head>
+<body>
+    <div class="header">
+
+
+    </div>
+
+
+    <div class="main">
+        <p class="title">{{ film.title }}</p>
+        <p class="description">{{ film.genre }}. Рейтинг: {{ film.rating }}</p>
+        <ul class="comments">
+            {% for comment in comments %}
+            <li class="film">
+                {{ comment.author }}
+                {{ comment.text }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    
+</body>
+</html>
