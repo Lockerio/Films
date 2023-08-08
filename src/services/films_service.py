@@ -8,6 +8,9 @@ class FilmService:
     def get_one(self, film_id):
         return self.serializer.get_one(film_id)
 
+    def get_random_one_by_genre(self, genre):
+        return self.serializer.get_random_one_by_genre(genre)
+
     def get_all(self):
         return self.serializer.get_all()
 

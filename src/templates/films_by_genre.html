@@ -7,14 +7,10 @@
 </head>
 <body>
     <div class="header">
-        <form action="/films_by_genre" method="post">
-            <select name="genre">
-                <option value="Драма">Драма</option>
-                <option value="comedy">Comedy</option>
-            </select>
+        <form action="/random_film" method="post">
+            <input type="hidden" name="genre" value="{{ genre }}">
             <input type="submit" value="Show Movies">
         </form>
-
     </div>
 
     <ul class="films">

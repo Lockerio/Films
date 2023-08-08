@@ -46,11 +46,10 @@ class FilmDataHelper:
             "rating": current_rating,
             "comments": [
                 {
-                    "author": comment.user.first_name + comment.user.last_name,
+                    "author": comment.user.first_name + " " + comment.user.last_name,
                     "text": comment.text
                 }
                 for comment in film.comments
             ]
         }
-
         return formatted_film
