@@ -24,7 +24,8 @@ def detail_film(film_id):
 @app.route('/films_by_genre', methods=['POST'])
 def films_by_genre():
     selected_genre = request.form.get('genre')
-    films = filmService.get_all_by_genre(selected_genre)
+    raw_films = filmService.get_all_by_genre(selected_genre)
+    films = filmDataHelper.format_films(raw_films)
     return render_template('films_by_genre.html', films=films, genre=selected_genre)
 
 

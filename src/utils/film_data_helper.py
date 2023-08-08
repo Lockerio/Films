@@ -33,7 +33,8 @@ class FilmDataHelper:
                 "rating": current_rating
             })
 
-        return formatted_films
+        sorted_films = sorted(formatted_films, key=lambda x: x['rating'], reverse=True)
+        return sorted_films
 
     def format_film(self, film):
         ratings = film.ratings
@@ -52,4 +53,5 @@ class FilmDataHelper:
                 for comment in film.comments
             ]
         }
+
         return formatted_film

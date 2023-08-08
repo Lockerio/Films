@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <title>Главная</title>
+    <title>{{ genre }}</title>
 </head>
 <body>
     <div class="header">
         <form action="/random_film" method="post">
             <input type="hidden" name="genre" value="{{ genre }}">
-            <input type="submit" value="Show Movies">
+            <input type="submit" value="Дайте мне случайный фильм">
         </form>
     </div>
 

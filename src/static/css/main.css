@@ -20,6 +20,11 @@ body {
     background: var(--background-color);
 }
 
+.header {
+    margin: 30px;
+    padding: 0 0 0 20px;
+}
+
 .films {
     margin: 20px;
     list-style-type: none;
@@ -27,6 +32,7 @@ body {
 
 .film {
     border-radius: 5px;
+    margin: 10px;
     padding: 20px;
     background: var(--button-color);
 }
