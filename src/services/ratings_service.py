@@ -12,10 +12,14 @@ class RatingService:
         return self.serializer.get_all()
 
     def update(self, data):
-        return self.serializer.update(data)
+        if 0 < data["rating"] <= 5:
+            return self.serializer.create(data)
+        return
 
     def create(self, data):
-        return self.serializer.create(data)
+        if 0 < data["rating"] <= 5:
+            return self.serializer.create(data)
+        return
 
     def delete(self, film_id, user_id):
         self.serializer.delete(film_id, user_id)
